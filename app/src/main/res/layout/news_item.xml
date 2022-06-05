@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/card"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="8dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <!-- Media -->
+        <ImageView
+            android:id="@+id/tvThumbinail"
+            android:layout_width="match_parent"
+            android:layout_height="194dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@color/black"
+            android:contentDescription="@string/cd_news_image"
+            />
+
+
+        <!-- Title, secondary and supporting text -->
+        <TextView
+            android:id="@+id/tvtitle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/default_margin"
+            android:layout_marginTop="@dimen/default_margin"
+            android:layout_marginEnd="@dimen/default_margin"
+            android:layout_marginBottom="@dimen/default_margin"
+            android:textAppearance="?attr/textAppearanceHeadline6"
+            app:layout_constraintBottom_toTopOf="@+id/tvdescription"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvThumbinail"
+            tools:text="Santander oferece 50 mil bolsas para cursos de programação" />
+
+        <TextView
+            android:id="@+id/tvdescription"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/default_margin"
+            android:layout_marginTop="@dimen/default_margin"
+            android:layout_marginEnd="@dimen/default_margin"
+            android:textAppearance="?attr/textAppearanceBody2"
+            android:textColor="?android:attr/textColorSecondary"
+
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvtitle"
+            tools:text="Para participar do programa, não é necessário ter qualquer graduação ou formação em tecnologia" />
+
+
+
+        <Button
+            android:id="@+id/btOpenlink"
+            style="?attr/borderlessButtonStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/default_margin"
+            android:layout_marginTop="28dp"
+            android:layout_marginBottom="@dimen/default_margin"
+            android:text="@string/txt_open_link"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvdescription"
+            app:layout_constraintVertical_bias="1.0" />
+
+        <ImageView
+            android:id="@+id/ivFavorite"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/default_margin"
+            android:layout_marginBottom="@dimen/default_margin"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:srcCompat="@drawable/ic_favorite"
+            android:contentDescription="@string/cd_favorite_icon"
+            android:background="?android:selectableItemBackgroundBorderless"
+            android:clickable="true"
+            android:focusable="true"
+            android:padding="4dp"
+            />
+
+        <ImageView
+            android:id="@+id/ivShare"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="32dp"
+            app:layout_constraintBottom_toBottomOf="@+id/btOpenlink"
+            app:layout_constraintEnd_toStartOf="@+id/ivFavorite"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toEndOf="@+id/btOpenlink"
+            app:layout_constraintTop_toTopOf="@+id/btOpenlink"
+            app:layout_constraintVertical_bias="1.0"
+            app:srcCompat="@drawable/ic_share"
+            android:contentDescription="@string/cd_share_icon"
+            android:background="?android:selectableItemBackgroundBorderless"
+            android:clickable="true"
+            android:focusable="true"
+            android:padding="4dp"
+            />
+
+
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</com.google.android.material.card.MaterialCardView>
