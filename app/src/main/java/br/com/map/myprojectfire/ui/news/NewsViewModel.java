@@ -3,25 +3,50 @@ package br.com.map.myprojectfire.ui.news;
 import androidx.lifecycle.LiveData;
 import androidx.lifecycle.MutableLiveData;
 import androidx.lifecycle.ViewModel;
-
-import java.util.ArrayList;
 import java.util.List;
 
+import br.com.map.myprojectfire.data.remote.NewsApi;
 import br.com.map.myprojectfire.domain.News;
+import retrofit2.Call;
+import retrofit2.Callback;
+import retrofit2.Response;
+import retrofit2.Retrofit;
+import retrofit2.converter.gson.GsonConverterFactory;
+
 
 public class NewsViewModel extends ViewModel {
 
-    private MutableLiveData<List<News>> news;
+    private final MutableLiveData<List<News>> news = new MutableLiveData<>();
+    private final  NewsApi api;
 
     public NewsViewModel() {
-      this.news = new MutableLiveData<>();
+        Retrofit retrofit = new Retrofit.Builder()
+                .baseUrl("https://wesleyorrr.github.io/simulator-Api/")
+                .addConverterFactory(GsonConverterFactory.create())
+                .build();
 
-        //TODO mocks de noticia
-      List<News> news = new ArrayList<>();
-      news.add(new News("Santander oferece 50 mil bolsas para cursos de programação","Para participar do programa, não é necessário ter qualquer graduação ou formação em tecnologia"));
-        news.add(new News("Santander abre safra de resultados dos bancos. Veja o que esperar","Taxas de juros mais altas impactam de forma mais evidente os números do setor, em especial a qualidade dos ativos"));
-        news.add(new News("Santander começa a financiar imóveis na planta. Veja como funciona","Nova linha terá condições similares às oferecidas pelo banco no financiamento tradicional, com juros a partir de 9,49% ao ano"));
-    this.news.setValue(news);
+    api = retrofit.create(NewsApi.class);
+findsNews();
+
+    }
+
+    private void findsNews() {
+        api.getNews().enqueue(new Callback<List<News>>() {
+            @Override
+            public void onResponse(Call<List<News>> call, Response<List<News>> response) {
+                if (response.isSuccessful()){
+                    news.setValue(response.body());
+                }else {
+                    //TODO pensar em uma tratamento de erros
+
+                }
+            }
+
+            @Override
+            public void onFailure(Call<List<News>> call, Throwable t) {
+                //TODO pensar em uma tratamento de erros
+            }
+        });
     }
 
     public LiveData<List<News>> getNews() {
