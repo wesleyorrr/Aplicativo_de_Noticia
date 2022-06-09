@@ -71,23 +71,22 @@
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/tvdescription"
-            app:layout_constraintVertical_bias="1.0" />
+             />
 
         <ImageView
             android:id="@+id/ivFavorite"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginEnd="@dimen/default_margin"
-            android:layout_marginBottom="@dimen/default_margin"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:srcCompat="@drawable/ic_favorite"
-            android:contentDescription="@string/cd_favorite_icon"
             android:background="?android:selectableItemBackgroundBorderless"
             android:clickable="true"
+            android:contentDescription="@string/cd_favorite_icon"
             android:focusable="true"
             android:padding="4dp"
-            />
+            app:layout_constraintBottom_toBottomOf="@+id/ivShare"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/ivShare"
+            app:srcCompat="@drawable/ic_favorite" />
 
         <ImageView
             android:id="@+id/ivShare"

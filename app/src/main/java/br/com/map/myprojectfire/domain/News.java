@@ -2,6 +2,9 @@ package br.com.map.myprojectfire.domain;
 
 public class News {
     private String title;
+    private String description;
+    private String image;
+    private String link;
 
     public String getTitle() {
         return title;
@@ -27,17 +30,11 @@ public class News {
         this.image = image;
     }
 
-    public String getLike() {
-        return like;
+    public String getLink() {
+        return link;
     }
 
-    public void setLike(String like) {
-        this.like = like;
+    public void setLink(String link) {
+        this.link = link;
     }
-
-    private String description;
-    private String image;
-    private String like;
-
-
 }

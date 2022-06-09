@@ -1,10 +1,14 @@
 package br.com.map.myprojectfire.ui.adapter;
 
+import android.content.Intent;
+import android.net.Uri;
 import android.view.LayoutInflater;
 import android.view.ViewGroup;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
+
+import com.squareup.picasso.Picasso;
 
 import java.util.List;
 
@@ -33,19 +37,30 @@ public class NewsAdapter extends RecyclerView.Adapter<NewsAdapter.ViewHolder>{
         holder.binding.tvtitle.setText(news.getTitle());
         holder.binding.tvdescription.setText(news.getDescription());
 
+
+
+        Picasso.get()
+                .load(news.getImage())
+                .fit()
+                .into(holder.binding.tvThumbinail);
+
+        holder.binding.btOpenlink.setOnClickListener(view -> {
+
+            Intent i = new Intent(Intent.ACTION_VIEW);
+            i.setData(Uri.parse(news.getLink()));
+            holder.itemView.getContext().startActivity(i);
+        });
     }
 
     @Override
-    public int getItemCount() {
-        return this.news.size();
-    }
+    public int getItemCount() {return this.news.size(); }
 
     public static class  ViewHolder extends RecyclerView.ViewHolder{
         private final NewsItemBinding binding;
 
         public ViewHolder(NewsItemBinding binding){
             super(binding.getRoot());
-            this.binding =binding;
+            this.binding = binding;
         }
 
     }

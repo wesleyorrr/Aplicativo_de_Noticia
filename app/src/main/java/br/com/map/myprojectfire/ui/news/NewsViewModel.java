@@ -26,11 +26,11 @@ public class NewsViewModel extends ViewModel {
                 .build();
 
     api = retrofit.create(NewsApi.class);
-findsNews();
+this.findsNews();
 
     }
 
-    private void findsNews() {
+ private void findsNews() {
         api.getNews().enqueue(new Callback<List<News>>() {
             @Override
             public void onResponse(Call<List<News>> call, Response<List<News>> response) {
@@ -49,7 +49,7 @@ findsNews();
         });
     }
 
-    public LiveData<List<News>> getNews() {
+    public LiveData<List<News>> getNews()  {
         return news;
     }
 }
