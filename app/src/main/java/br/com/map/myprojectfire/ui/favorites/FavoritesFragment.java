@@ -11,9 +11,15 @@ import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProvider;
+import androidx.recyclerview.widget.LinearLayoutManager;
 
 
+import java.util.List;
+
+import br.com.map.myprojectfire.MainActivity;
 import br.com.map.myprojectfire.databinding.FragmentFavoritesBinding;
+import br.com.map.myprojectfire.domain.News;
+import br.com.map.myprojectfire.ui.adapter.NewsAdapter;
 
 public class FavoritesFragment extends Fragment {
 
@@ -21,21 +27,29 @@ public class FavoritesFragment extends Fragment {
     private FragmentFavoritesBinding binding;
 
     public View onCreateView(@NonNull LayoutInflater inflater,
-                             ViewGroup container, Bundle savedInstanceState) {
-        favoritesViewModel =
-                new ViewModelProvider(this).get(FavoritesViewModel.class);
+                             ViewGroup container, Bundle savedInstanceState) { favoritesViewModel = new ViewModelProvider(this).get(FavoritesViewModel.class);
 
         binding = FragmentFavoritesBinding.inflate(inflater, container, false);
-        View root = binding.getRoot();
 
-        final TextView textView = binding.textFragmentsui;
-        favoritesViewModel.getText().observe(getViewLifecycleOwner(), new Observer<String>() {
-            @Override
-            public void onChanged(@Nullable String s) {
-                textView.setText(s);
+
+
+     loadFavoriteNews();
+
+        return  binding.getRoot();
+    }
+
+    private void loadFavoriteNews() {
+        MainActivity activity =(MainActivity) getActivity();
+        List<News> favoriteNews = activity.getDb().newsDao().loandFavoriteNews();
+        binding.rvNews.setLayoutManager(new LinearLayoutManager(getContext()));
+        binding.rvNews.setAdapter(new NewsAdapter(favoriteNews, updateNews -> {
+            if (activity != null) {
+                activity.getDb().newsDao().save(updateNews);
+
+                loadFavoriteNews();
             }
-        });
-        return root;
+
+        }));
     }
 
     @Override
