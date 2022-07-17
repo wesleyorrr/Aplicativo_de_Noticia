@@ -19,7 +19,7 @@
   <img src="https://github.com/wesleyorrr/News-project/blob/main/foto%2003.jpg" height="425" />
   <img src="https://github.com/wesleyorrr/News-project/blob/main/foto%2004.jpg" height="425" />
     <img src="https://github.com/wesleyorrr/News-project/blob/main/foto%200.jpg" height="425" />
-      <img src="https://github.com/wesleyorrr/News-project/blob/main/foto%2001.jpg"425" />
+      <img src="https://github.com/wesleyorrr/News-project/blob/main/foto%2001.jpg" height="425" />
         <img src="https://github.com/wesleyorrr/News-project/blob/main/foto%2002.jpg" height="425" />
           <img src="https://github.com/wesleyorrr/News-project/blob/main/foto%2003.jpg" height="425" />
             <img src="https://github.com/wesleyorrr/News-project/blob/main/foto%2004.jpg" height="425" />
