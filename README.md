@@ -7,6 +7,7 @@
 - [x] [XML](https://developer.android.com/guide/topics/manifest/manifest-intro?gclsrc=aw.ds&gclid=Cj0KCQiAk4aOBhCTARIsAFWFP9GgxOFGyEUBS_kUYd_6Zq1mPFL0iYbW588UovfFmujkYNoX7RrAolcaAj6fEALw_wcB)
 - [x] [Material Desing](https://material.io/design)
 - [x] [Jetpack Navigation](https://medium.com/android-dev-br/usando-navigation-component-android-jetpack-e1356921b31d)
+- [x] [Retrofit](https://square.github.io/retrofit/)
 - [x] [Room](https://developer.android.com/jetpack/androidx/releases/room?gclsrc=aw.ds&gclid=Cj0KCQiAk4aOBhCTARIsAFWFP9GELrIqxLn9vZyPfhiMxgCM1mJ_8Cxa9Q_-sX8hB5z1pX32u3lhd4caAlokEALw_wcB)
 
 
@@ -18,9 +19,9 @@
   <img src="https://github.com/wesleyorrr/News-project/blob/main/foto%2002.jpg" height="425" />
   <img src="https://github.com/wesleyorrr/News-project/blob/main/foto%2003.jpg" height="425" />
   <img src="https://github.com/wesleyorrr/News-project/blob/main/foto%2004.jpg" height="425" />
-    <img src="https://github.com/wesleyorrr/News-project/blob/main/foto%200.jpg" height="425" />
       <img src="https://github.com/wesleyorrr/News-project/blob/main/foto%2001.jpg" height="425" />
         <img src="https://github.com/wesleyorrr/News-project/blob/main/foto%2002.jpg" height="425" />
+	<img src="https://github.com/wesleyorrr/News-project/blob/main/foto%200.jpg" height="425" />
           <img src="https://github.com/wesleyorrr/News-project/blob/main/foto2.jpg" height="425" />
             
 
