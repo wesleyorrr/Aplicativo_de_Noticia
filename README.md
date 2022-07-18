@@ -22,6 +22,6 @@
       <img src="https://github.com/wesleyorrr/News-project/blob/main/foto%2001.jpg" height="425" />
         <img src="https://github.com/wesleyorrr/News-project/blob/main/foto%2002.jpg" height="425" />
           <img src="https://github.com/wesleyorrr/News-project/blob/main/foto2.jpg" height="425" />
-            <img src="https://github.com/wesleyorrr/News-project/blob/main/foto%2004.jpg" height="425" />
+            
 
 </h1>
