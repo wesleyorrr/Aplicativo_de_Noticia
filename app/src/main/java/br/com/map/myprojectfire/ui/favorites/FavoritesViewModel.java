@@ -18,11 +18,11 @@ public class FavoritesViewModel extends ViewModel {
 
    public LiveData<List<News>> loadFavoriteNews() {
 
-        return NewsRepository.getInstance().getLocaldb().newsDao().loandFavoriteNews();
+        return NewsRepository.getInstance().getLocalDb().newsDao().loandFavoriteNews();
     }
 
     public void saveNews(News news) {
-        AsyncTask.execute(() -> NewsRepository.getInstance().getLocaldb().newsDao().save(news));
+        AsyncTask.execute(() -> NewsRepository.getInstance().getLocalDb().newsDao().save(news));
 
     }
 

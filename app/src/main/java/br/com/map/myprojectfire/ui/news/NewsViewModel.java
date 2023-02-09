@@ -55,7 +55,7 @@ public class NewsViewModel extends ViewModel {
     }
 
     public void saveNews(News news) {
-        AsyncTask.execute(() -> NewsRepository.getInstance().getLocaldb().newsDao().save(news));
+        AsyncTask.execute(() -> NewsRepository.getInstance().getLocalDb().newsDao().save(news));
 
 
     }

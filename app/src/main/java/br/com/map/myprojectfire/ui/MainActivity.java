@@ -1,4 +1,4 @@
-package br.com.map.myprojectfire;
+package br.com.map.myprojectfire.ui;
 
 import android.os.Bundle;
 
@@ -8,6 +8,7 @@ import androidx.navigation.Navigation;
 import androidx.navigation.ui.AppBarConfiguration;
 import androidx.navigation.ui.NavigationUI;
 
+import br.com.map.myprojectfire.R;
 import br.com.map.myprojectfire.databinding.ActivityMainBinding;
 
 public class MainActivity extends AppCompatActivity {
