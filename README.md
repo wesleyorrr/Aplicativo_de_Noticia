@@ -1,6 +1,6 @@
 # News-project
 # Bootcamp Santander
-## Lista de noticias desenvolvido em Java para o Bootcamp Santander. Nesse aplicativo o usuário final podera consumir a api news.json alem de  favoritar os cards e compartilhar as News com amigos.
+##  App capaz de favoritar os cards e compartilhar as News com amigos.
 # Tecnologias ultilizadas
 - [x] [Android Studio](https://developer.android.com/studio?hl=pt&gclsrc=aw.ds&gclid=Cj0KCQiAk4aOBhCTARIsAFWFP9GJFuME6UxG4cgkUFzeBFgfa0b1XHhdBN9EPVe4G0To3rPTH6PDaw8aAr80EALw_wcB)
 - [x] [Java](https://developer.android.com/kotlin?hl=pt&gclsrc=aw.ds&gclid=Cj0KCQiAk4aOBhCTARIsAFWFP9EYXeWC3amRzUtIkC9bwzgZbb4IUHqbp6vk8MgYOZ--DXlN1S484cUaAtvfEALw_wcB)
