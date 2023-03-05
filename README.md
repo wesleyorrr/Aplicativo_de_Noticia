@@ -9,6 +9,7 @@
 - [x] [Jetpack Navigation](https://medium.com/android-dev-br/usando-navigation-component-android-jetpack-e1356921b31d)
 - [x] [Retrofit](https://square.github.io/retrofit/)
 - [x] [Room](https://developer.android.com/jetpack/androidx/releases/room?gclsrc=aw.ds&gclid=Cj0KCQiAk4aOBhCTARIsAFWFP9GELrIqxLn9vZyPfhiMxgCM1mJ_8Cxa9Q_-sX8hB5z1pX32u3lhd4caAlokEALw_wcB)
+- [x] [MVVM architecture](https://github.com/topics/mvvm)
 
 
 
